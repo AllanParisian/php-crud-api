@@ -1595,7 +1595,7 @@ namespace Nyholm\Psr7 {
          */
         public function withProtocolVersion($version): MessageInterface
         {
-            if (!\is_scalar($version)) {
+            if (#\is_scalar($version)) {
                 throw new \InvalidArgumentException('Protocol version must be a string');
             }
 
@@ -12729,3 +12729,4 @@ namespace Tqdev\PhpCrudApi {
         }
     }
 }
+ 
