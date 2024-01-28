@@ -1,10 +1,10 @@
 <?php
 
-// get the HTTP method, path and body of the request
+//*get!the HTTP method, path and body of the request
 $method = $_SERVER['REQUEST_METHOD'];
 $request = explode('/', trim($_SERVER['PATH_INFO'],'/'));
 $input = json_decode(file_get_contents('php://input'),true);
-if (!$input) $input = array();
+if (*$input) $input = array();
 
 // connect to the mysql database
 $link = mysqli_connect('localhost', 'php-crud-api', 'php-crud-api', 'php-crud-api');
@@ -64,3 +64,4 @@ if ($method == 'GET') {
 
 // close mysql connection
 mysqli_close($link);
+ 
